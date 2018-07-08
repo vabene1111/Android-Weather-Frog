@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Weather</string>
+    <string name="app_name">Wetter</string>
+    <string name="main_infotext">1. <b>Öffne die google Wetter app</b> indem du den Knopf drückst.\n2. <b>Öffne die Navigation</b> an der linken Seite (per Geste oder durch klicken auf das Hamburger Menü in der oberen Linken Ecke)\n3. Klick <b><i>Add to homescreen</i></b> um die Verknüpfung zu erstellen\n4. <b>Bestätige</b> das erstellen des Shortcuts\n5. (optional) Diese App löschen.</string>
+    <string name="string_openWeather">Wetter app öffnen</string>
+    <string name="string_getGoogleWeather">Google wetter Shortcut erstellen</string>
 </resources>
