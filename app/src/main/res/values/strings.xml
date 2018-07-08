@@ -3,4 +3,5 @@
     <string name="main_infotext">1. <b>Open the google weather app</b> by clicking the button\n2. <b>Expand the Navigation</b> on the left side (by using the gesture or clicking the hamburger menu in the top left corner)\n3. Click <b><i>Add to home screen</i></b> to create the native app shortcut\n4. <b>Confirm</b> shortcut creation\n5. (optional) Delete this app</string>
     <string name="string_openWeather">Open weather app</string>
     <string name="string_getGoogleWeather">Get the google weather shortcut</string>
+    <string name="string_github">GitHub</string>
 </resources>
