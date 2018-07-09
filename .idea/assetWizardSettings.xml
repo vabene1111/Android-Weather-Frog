@@ -34,7 +34,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="61" />
+                                                <entry key="scalingPercent" value="44" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -46,7 +46,7 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="fffbfc" />
-                                      <entry key="foregroundImage" value="F:\Developement\Android\Weather\app\src\main\res\drawable\weather.png" />
+                                      <entry key="foregroundImage" value="F:\Developement\Android\Weather\app\src\main\res\drawable\ic_launcher.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
