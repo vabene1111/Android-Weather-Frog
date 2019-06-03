@@ -1,5 +1,6 @@
 package de.droidenschmiede.weather;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,10 +51,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openWeatherApp(){
-        Intent intent = new Intent("android.intent.action.VIEW");
-        intent.setData(Uri.parse("dynact://velour/weather/ProxyActivity"));
-        intent.setClassName("com.google.android.googlequicksearchbox", "com.google.android.apps.gsa.velour.DynamicActivityTrampoline");
-        startActivity(intent);
-        finish();
+
+        try{
+
+            Intent intent = new Intent("android.intent.action.VIEW");
+            intent.setData(Uri.parse("dynact://velour/weather/ProxyActivity"));
+            intent.setClassName("com.google.android.googlequicksearchbox", "com.google.android.apps.gsa.velour.DynamicActivityTrampoline");
+            startActivity(intent);
+            finish();
+
+        } catch ( ActivityNotFoundException e) {
+            e.printStackTrace();
+
+            Toast.makeText(this, getResources().getText(R.string.activity_not_found), Toast.LENGTH_LONG).show();
+        }
+
     }
 }

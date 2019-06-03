@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#d84315</color>
-    <color name="colorPrimaryDark">#9f0000</color>
-    <color name="colorAccent">#2e7d32</color>
+    <color name="colorPrimary">#FF9C08</color>
+    <color name="colorPrimaryDark">#FF9C08</color>
+    <color name="colorAccent">#FFAF08</color>
+
+    <color name="colorCircle">#FFAB00</color>
+    <color name="colorTextCircle">#ffffff</color>
+    <color name="colorTextInstr">#666666</color>
+    <color name="colorTextHead">#FFAB00</color>
+
+    <color name="colorCardBgHead">#FFFFFF</color>
+    <color name="colorCardBgInstr">#ffffff</color>
+
+    <color name="colorButton">#FFAF08</color>
+
+    <color name="colorWhite">#ffffff</color>
 </resources>

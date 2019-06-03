@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Wetter</string>
-    <string name="main_infotext">1. <b>Öffne die google Wetter app</b> indem du den Knopf drückst.\n2. <b>Öffne die Navigation</b> an der linken Seite (per Geste oder durch klicken auf das Hamburger Menü in der oberen Linken Ecke)\n3. Klick <b><i>Add to homescreen</i></b> um die Verknüpfung zu erstellen\n4. <b>Bestätige</b> das erstellen des Shortcuts\n5. (optional) Diese App löschen.</string>
-    <string name="string_openWeather">Wetter app öffnen</string>
-    <string name="string_getGoogleWeather">Google wetter Shortcut erstellen</string>
+    <string name="app_name">Wetterfrosch</string>
+
+    <string name="openWeather">Wetterapp öffnen</string>
+    <string name="getGoogleWeather">Wetterapp Verknüpfung erstellen</string>
+    <string name="github">GitHub</string>
+
+    <string name="inst_1">Öffne die Google Wetter App </string>
+    <string name="inst_2">Öffne die Navigation an der linken Seite (per Geste oder durch Klicken auf das Menü in der oberen linken Ecke)</string>
+    <string name="inst_3">Klicke auf \"Add to home screen\" um die Verknüpfung zu erstellen</string>
+    <string name="inst_4">Bestätigen und fertig ;) </string>
+
+    <string name="activity_not_found">Das Programm konnte leider nicht gefunden werden :(</string>
+
 </resources>
