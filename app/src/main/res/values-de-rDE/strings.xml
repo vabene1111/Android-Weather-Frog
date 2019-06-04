@@ -7,10 +7,17 @@
     <string name="github">GitHub</string>
 
     <string name="inst_1">Öffne die Google Wetter App </string>
-    <string name="inst_2">Öffne die Navigation an der linken Seite (per Geste oder durch Klicken auf das Menü in der oberen linken Ecke)</string>
+    <string name="inst_2">Öffne die Navigation an der linken Seite (per Geste oder durch Klicken auf das Menü in der linken oberen Ecke)</string>
     <string name="inst_3">Klicke auf \"Add to home screen\" um die Verknüpfung zu erstellen</string>
     <string name="inst_4">Bestätigen und fertig ;) </string>
 
-    <string name="activity_not_found">Das Programm konnte leider nicht gefunden werden :(</string>
+    <string name="warning_1">Uns wurde mitgeteilt, dass die Verknüpfung manchmal vom System wieder entfernt wird.
+        Sollte dies passieren, lege einfach eine neue an oder öffne die App über den Knopf unten</string>
+
+    <string name="warning_2">In seltenen Fällen kann die Wetterapp auf deinem Gerät nicht gefunden oder ausgeführt werden.
+        Daran kann unsere App aber leider nichts ändern. Wir bitten dies trotzdem zu entschuldigen</string>
+
+
+    <string name="activity_not_found">Die Wetterapp konnte leider nicht gefunden werden :(</string>
 
 </resources>

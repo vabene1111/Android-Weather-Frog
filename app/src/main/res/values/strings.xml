@@ -6,9 +6,15 @@
     <string name="github">GitHub</string>
 
     <string name="inst_1">Open the google weather app</string>
-    <string name="inst_2">Expand the Navigation on the left side (by using the gesture or clicking the menu in the top left corner)</string>
+    <string name="inst_2">Expand the navigation on the left side (by using the gesture or clicking the menu in the top left corner)</string>
     <string name="inst_3">Click \"Add to home screen\" to create the native app shortcut</string>
     <string name="inst_4">Confirm shortcut creation</string>
+
+    <string name="warning_1">We were told that the shortcut is sometimes removed by the system.
+        If this happens, just create a new one or open the app via the button below</string>
+
+    <string name="warning_2">In rare cases, the weather app can not be found or run on your device.
+        Unfortunately, our app can not change that. We apologize for this anyway</string>
 
     <string name="activity_not_found">We can\'t find the weather app, sorry :(</string>
 
