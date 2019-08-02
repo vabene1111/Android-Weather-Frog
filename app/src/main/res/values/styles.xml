@@ -45,4 +45,9 @@
         <item name="android:textColor">?colorAccent</item>
     </style>
 
+    <style name="ButtonStyleRate" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:colorAccent">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
 </resources>

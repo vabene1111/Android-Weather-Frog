@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Button btnWeather;
     public Button btnDonate;
+    public Button btnRate;
 
     public BillingManager billingManager;
     public PurchaseManager purchaseManager;
@@ -53,6 +54,15 @@ public class MainActivity extends AppCompatActivity {
                 dialogManager.showDonateDialog();
             }
         });
+
+        btnRate = findViewById(R.id.btn_main_rate);
+        btnRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+            }
+        });
+
     }
 
     @Override

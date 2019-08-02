@@ -1,8 +1,5 @@
 package de.droidenschmiede.weather.billing;
 
-import android.view.View;
-import android.widget.ImageView;
-
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.Purchase;
 
@@ -16,8 +13,8 @@ public class PurchaseManager {
 
     //Inventory
 
-    private PremiumState premiumState = PremiumState.CHECKING;
-    private Purchase purPremium;
+    private DonateState donateState = DonateState.CHECKING;
+    private Purchase purDonation;
 
     public PurchaseManager(MainActivity m) {
         this.m = m;
@@ -31,19 +28,17 @@ public class PurchaseManager {
             @Override
             public void onPurchasesUpdated(List<Purchase> purchases) {
 
-                premiumState = PremiumState.CHECKING;
-                purPremium = null;
+                donateState = DonateState.CHECKING;
+                purDonation = null;
 
                 for(Purchase purchase: purchases){
 
-                    if(purchase.getSku().equals("android.test.purchased")){
+                    if(purchase.getSku().equals(BillingConstants.getSku())){
 
-                        premiumState = PremiumState.CONFIRMED;
-                        purPremium = purchase;
+                        donateState = DonateState.CONFIRMED;
+                        purDonation = purchase;
 
                         consumeSpende();
-                        m.dialogManager.showDankeDialog();
-
                     }
                 }
 
@@ -53,6 +48,8 @@ public class PurchaseManager {
             @Override
             public void onConsumeFinished(BillingResult result, String purchaseToken) {
 
+                m.dialogManager.showDankeDialog();
+
                 m.billingManager.queryPurchases();
             }
         });
@@ -60,15 +57,15 @@ public class PurchaseManager {
 
     public void consumeSpende(){
 
-        if(premiumState == PremiumState.CONFIRMED){
+        if(donateState == DonateState.CONFIRMED){
 
-            m.billingManager.consumeAsync(purPremium.getPurchaseToken());
+            m.billingManager.consumeAsync(purDonation.getPurchaseToken());
         }
     }
 
-    public boolean isPremiumActive(){
+    public boolean isDonationActive(){
 
-        if(premiumState == PremiumState.CONFIRMED){
+        if(donateState == DonateState.CONFIRMED){
             return true;
         }
         else{

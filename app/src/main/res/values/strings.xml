@@ -28,6 +28,8 @@
     <string name="spenden_text">Hi, do you like this app? Yes? Then you might feel like buying us a coffee ♥</string>
     <string name="spenden_button">Donate a coffee</string>
 
+    <string name="rate">&#10025; Rate this app  &#10025;</string>
+
     <string name="danke">Thank you :)</string>
     <string name="danke_schliessen">Close</string>
 
@@ -44,7 +46,7 @@ Camillo-Sitte-Weg 71 \n
 60488 Frankfurt/Main \n
 \n
 Kontakt \n
-Telefon: +49 (0) 123 44 55 66 \n
+Telefon: +4917681503401\n
 E-Mail: droidenschmiede@gmail.com \n
 \n
 Streitschlichtung \n

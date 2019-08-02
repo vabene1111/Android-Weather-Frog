@@ -27,18 +27,39 @@ import java.util.List;
  */
 public final class BillingConstants {
     // SKUs for our products: the premium upgrade (non-consumable) and gas (consumable)
-    public static final String SKU_DONATE = "donate";
+
+    private final static boolean TESTDATA = false;
+
+    public static final String SKU_DONATE = "donate_one_dollar";
     private static final String[] IN_APP_SKUS = {SKU_DONATE};
+
+    //Test
+    public static final String SKU_TEST = "android.test.purchased";
+    private static final String[] IN_APP_SKUS_TEST = {SKU_TEST};
 
     private BillingConstants(){}
 
     /**
      * Returns the list of all SKUs for the billing type specified
      */
-    public static final List<String> getSkuList(@BillingClient.SkuType String billingType) {
+    public static final List<String> getSkuList() {
 
-        return Arrays.asList(IN_APP_SKUS);
-        //return (billingType == SkuType.INAPP) ? Arrays.asList(IN_APP_SKUS)
-        //        : Arrays.asList(SUBSCRIPTIONS_SKUS);
+        if(TESTDATA){
+            return Arrays.asList(IN_APP_SKUS_TEST);
+        }
+        else{
+            return Arrays.asList(IN_APP_SKUS);
+        }
     }
+
+    public static final String getSku(){
+
+        if(TESTDATA){
+            return SKU_TEST;
+        }
+        else{
+            return SKU_DONATE;
+        }
+    }
+
 }

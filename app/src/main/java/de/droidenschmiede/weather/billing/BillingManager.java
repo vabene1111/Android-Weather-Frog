@@ -109,17 +109,17 @@ public class BillingManager implements PurchasesUpdatedListener{
     public void showPurchaseWindow(){
 
         Log.d("Billing", "PurchaseWindow");
-        querySkuDetailsAsync(BillingClient.SkuType.INAPP, getSkuList(), null);
+        querySkuDetailsAsync(BillingClient.SkuType.INAPP, BillingConstants.getSkuList(), null);
 
     }
 
-    public List<String> getSkuList(){
+    /*public List<String> getSkuList(){
 
         List<String> skuList = new ArrayList<>();
         //skuList.add("premium_upgrade_1");
         skuList.add("android.test.purchased");
         return skuList;
-    }
+    }*/
 
     public void querySkuDetailsAsync(@BillingClient.SkuType final String itemType, final List<String> skuList,
                                      final SkuDetailsResponseListener listener) {
@@ -144,16 +144,7 @@ public class BillingManager implements PurchasesUpdatedListener{
 
                                     for (SkuDetails skuDetails : skuDetailsList) {
                                         String sku = skuDetails.getSku();
-                                        String price = skuDetails.getPrice();
-                                        String priceWithoutDiscount = skuDetails.getOriginalPrice();
-                                        if ("premium_upgrade_1".equals(sku)) {
-                                            premiumUpgradePrice = price;
-                                            premiumUpgradePriceNoDiscount = priceWithoutDiscount;
-
-                                            Log.d("Billing", "1");
-
-                                        }
-                                        else if("android.test.purchased".equals(sku)){
+                                        if(BillingConstants.getSku().equals(sku)){
 
                                             //skuDetails.getPrice();
 
