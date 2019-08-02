@@ -13,7 +13,17 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import de.droidenschmiede.weather.billing.BillingManager;
+import de.droidenschmiede.weather.billing.PurchaseManager;
+
 public class MainActivity extends AppCompatActivity {
+
+    public Button btnWeather;
+    public Button btnDonate;
+
+    public BillingManager billingManager;
+    public PurchaseManager purchaseManager;
+    public DialogManager dialogManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +31,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Button btnWeather = findViewById(R.id.btn_main_openWeather);
+        billingManager = new BillingManager(this);
+        purchaseManager = new PurchaseManager(this);
+        dialogManager = new DialogManager(this);
+
+        billingManager.initBilling();
+
+        btnWeather = findViewById(R.id.btn_main_openWeather);
         btnWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnDonate = findViewById(R.id.btn_main_donate);
+        btnDonate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogManager.showDonateDialog();
+            }
+        });
     }
 
     @Override

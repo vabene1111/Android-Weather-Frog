@@ -3,6 +3,8 @@
     <string name="app_name">Wetterfrosch</string>
 
     <string name="openWeather">Wetterapp öffnen</string>
+    <string name="donate">&#9829;  SPENDEN  &#9829;</string>
+    <string name="donateAgain">&#9829;  NOCHMAL SPENDEN  &#9829;</string>
     <string name="getGoogleWeather">Wetterapp Verknüpfung erstellen</string>
     <string name="github">GitHub</string>
 

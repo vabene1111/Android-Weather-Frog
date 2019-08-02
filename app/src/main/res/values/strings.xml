@@ -2,6 +2,8 @@
     <string name="app_name">Weather</string>
 
     <string name="openWeather">Open weather app</string>
+    <string name="donate">&#9829;DONATE&#9829;</string>
+    <string name="donateAgain">&#9829;DONATE AGAIN&#9829;</string>
     <string name="getGoogleWeather">Get the weather shortcut</string>
     <string name="github">GitHub</string>
 
