@@ -15,6 +15,7 @@ import android.widget.VideoView;
 
 import de.droidenschmiede.weather.billing.BillingManager;
 import de.droidenschmiede.weather.billing.PurchaseManager;
+import de.droidenschmiede.weather.dialogs.AboutTyp;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mi_main_github:
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/vabene1111/Android-Weather-Frog"));
                 startActivity(browserIntent);
+                return true;
+            case R.id.mi_main_donate:
+                dialogManager.showDonateDialog();
+                return true;
+            case R.id.mi_main_legal:
+                dialogManager.showAboutDialog(AboutTyp.IMPRESSUM);
+                return true;
+            case R.id.mi_main_info:
+                dialogManager.showAboutDialog(AboutTyp.INFO);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

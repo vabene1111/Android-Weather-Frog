@@ -3,7 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/mi_main_info"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/mi_main_legal"
+        android:title="@string/legal" />
+
+    <item
+        android:id="@+id/mi_main_donate"
+        android:title="@string/donate" />
+
+    <item
         android:id="@+id/mi_main_github"
-        android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/github" />
 </menu>

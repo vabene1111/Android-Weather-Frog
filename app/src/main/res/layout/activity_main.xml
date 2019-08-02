@@ -486,11 +486,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
-                app:cardCornerRadius="6dp"
+                app:cardCornerRadius="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/colorAccent"
+                app:cardBackgroundColor="@color/colorWhite"
                 >
 
                 <LinearLayout
@@ -508,17 +508,21 @@
                         >
 
                         <Button
-                            style="@style/Widget.AppCompat.Button.Colored"
+                            style="@style/ButtonStyle"
                             android:id="@+id/btn_main_donate"
                             android:layout_width="match_parent"
                             android:layout_height="65dp"
-                            android:text="@string/donate"
+                            android:text="@string/donateButton"
                             android:visibility="visible"
                             android:clickable="true"
                             android:focusable="true"
                             android:textColor="@color/colorWhite"
                             android:textSize="16sp"
                             android:elevation="0dp"
+                            android:layout_marginLeft="-6dip"
+                            android:layout_marginRight="-6dip"
+                            android:layout_marginTop="-6dip"
+                            android:layout_marginBottom="-6dip"
                             />
 
                     </LinearLayout>

@@ -1,4 +1,4 @@
-package de.droidenschmiede.weather;
+package de.droidenschmiede.weather.dialogs;
 
 
 import android.app.Dialog;
@@ -14,11 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import de.droidenschmiede.weather.MainActivity;
+import de.droidenschmiede.weather.R;
 
 public class SpendenDialogFragment extends DialogFragment {
 

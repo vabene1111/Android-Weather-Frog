@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dankeschön :)"
+                android:text="@string/danke"
                 android:textColor="@color/colorWhite"
                 android:textAlignment="center"
                 android:layout_margin="10dp"
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:id="@+id/button_danke_close"
-                android:text="Schliessen"
+                android:text="@string/danke_schliessen"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="20dp"

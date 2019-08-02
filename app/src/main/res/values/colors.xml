@@ -15,4 +15,5 @@
     <color name="colorButton">#FFAF08</color>
 
     <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparent">#00ffffff</color>
 </resources>

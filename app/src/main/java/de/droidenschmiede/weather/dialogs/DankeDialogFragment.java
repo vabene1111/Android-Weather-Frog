@@ -1,4 +1,4 @@
-package de.droidenschmiede.weather;
+package de.droidenschmiede.weather.dialogs;
 
 
 import android.app.Dialog;
@@ -17,6 +17,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import de.droidenschmiede.weather.MainActivity;
+import de.droidenschmiede.weather.R;
 
 public class DankeDialogFragment extends DialogFragment {
 

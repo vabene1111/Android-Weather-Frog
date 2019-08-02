@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#fafafa"
+    android:padding="5dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="?colorPrimary"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/logo_round"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:text="@string/app_name"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_impressum_version"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:text="Version 1.0.0 (1)"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:text="© Droidenschmiede 2019"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#3d4854"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="0dp"
+                android:text="powered by"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/logo_droidenschmiede"
+                android:layout_marginTop="0dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="0dp"
+                android:text="DROIDEN\nSCHMIEDE"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

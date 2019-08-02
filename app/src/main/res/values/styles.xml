@@ -20,7 +20,28 @@
 
     </style>
 
-    <style name="ButtonStyle" parent="AppTheme">
+    <style name="DialogFull" parent="AppTheme">
+
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowBackground">@color/colorTransparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="ButtonStyle2" parent="Widget.AppCompat.Button.Borderless.Colored">
         <item name="android:textColor">?colorAccent</item>
     </style>
 
