@@ -4,7 +4,7 @@ Sometimes Google does not allow the user to create a shortcut to the build in go
 
 This app simply contains an intend to open the google app with the required parameters.
 
-## Intall
+## Install
 
 An APK for download can be found [here](https://github.com/vabene1111/Android-Weather-Frog/releases). If you cannot install it directly make sure to enable installing of third party apllications.
 
