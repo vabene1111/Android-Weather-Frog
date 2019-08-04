@@ -206,20 +206,22 @@ public class BillingManager implements PurchasesUpdatedListener{
                         + "ms");
                 // If there are subscriptions supported, we add subscription rows as well
                 if (areSubscriptionsSupported()) {
-                    Purchase.PurchasesResult subscriptionResult
-                            = billingClient.queryPurchases(BillingClient.SkuType.SUBS);
+                    Purchase.PurchasesResult subscriptionResult = billingClient.queryPurchases(BillingClient.SkuType.SUBS);
                     Log.i(TAG, "Querying purchases and subscriptions elapsed time: "
                             + (System.currentTimeMillis() - time) + "ms");
-                    Log.i(TAG, "Querying subscriptions result code: "
-                            + subscriptionResult.getResponseCode()
-                            + " res: " + subscriptionResult.getPurchasesList().size());
+                    if(subscriptionResult != null && subscriptionResult.getPurchasesList() != null){
+                        Log.i(TAG, "Querying subscriptions result code: "
+                                + subscriptionResult.getResponseCode()
+                                + " res: " + subscriptionResult.getPurchasesList().size());
 
-                    if (subscriptionResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                        purchasesResult.getPurchasesList().addAll(
-                                subscriptionResult.getPurchasesList());
-                    } else {
-                        Log.e(TAG, "Got an error response trying to query subscription purchases");
+                        if (subscriptionResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                            purchasesResult.getPurchasesList().addAll(
+                                    subscriptionResult.getPurchasesList());
+                        } else {
+                            Log.e(TAG, "Got an error response trying to query subscription purchases");
+                        }
                     }
+
                 } else if (purchasesResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     Log.i(TAG, "Skipped subscription purchases query since they are not supported");
                 } else {
