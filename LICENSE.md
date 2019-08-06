@@ -1,3 +1,6 @@
+Everything except the `logo_droidenschmiede` is licensed under the following license. The logo cannot
+be used!
+
 MIT License
 
 Copyright (c) 2018 
