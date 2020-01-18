@@ -15,7 +15,7 @@ public class AdManager {
 
     public MainActivity m;
 
-    public void AdManager(MainActivity m){
+    public AdManager(MainActivity m){
         this.m = m;
 
         init();
@@ -25,16 +25,19 @@ public class AdManager {
         MobileAds.initialize(m, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
+                loadBanner1();
             }
         });
 
-        loadBanner1();
+
     }
 
     public void loadBanner1(){
 
         AdView mAdView = m.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("9AF9280FE7C9BA01E232DE17BBF355DC")
+                .build();
         mAdView.loadAd(adRequest);
 
         mAdView.setAdListener(new AdListener() {

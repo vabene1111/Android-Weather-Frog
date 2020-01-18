@@ -1,7 +1,7 @@
 package de.droidenschmiede.weather.billing;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;

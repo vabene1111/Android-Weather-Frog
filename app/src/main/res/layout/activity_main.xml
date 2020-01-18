@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
@@ -25,7 +25,7 @@
             android:orientation="vertical"
             >
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -57,9 +57,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -84,7 +84,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         >
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:orientation="vertical"
@@ -105,7 +105,7 @@
                                 android:textAlignment="center"
                                 android:textColor="@color/colorTextCircle"
                                 />
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -120,9 +120,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -147,7 +147,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         >
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:orientation="vertical"
@@ -169,7 +169,7 @@
                                 android:textColor="@color/colorTextCircle"
                                 />
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -203,9 +203,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -230,7 +230,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         >
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:orientation="vertical"
@@ -252,7 +252,7 @@
                                 android:textColor="@color/colorTextCircle"
                                 />
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
 
                         <LinearLayout
@@ -282,9 +282,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -308,14 +308,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         ads:adSize="MEDIUM_RECTANGLE"
-                        ads:adUnitId="ca-app-pub-ca-app-pub-3940256099942544/6300978111">
+                        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
                     </com.google.android.gms.ads.AdView>
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardElevation="2dp"
@@ -340,7 +340,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     >
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:orientation="vertical"
@@ -362,7 +362,7 @@
                             android:textColor="@color/colorTextCircle"
                             />
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -391,9 +391,9 @@
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -418,7 +418,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         >
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:orientation="vertical"
@@ -436,7 +436,7 @@
                                 android:src="@drawable/icon_info"
                                 />
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -451,9 +451,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -478,7 +478,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
                         >
-                        <android.support.v7.widget.CardView
+                        <androidx.cardview.widget.CardView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:orientation="vertical"
@@ -496,7 +496,7 @@
                                 android:src="@drawable/icon_info"
                                 />
 
-                        </android.support.v7.widget.CardView>
+                        </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -511,9 +511,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -560,9 +560,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="2dp"
@@ -608,7 +608,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -665,9 +665,9 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="14sp"
                     android:elevation="5dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
                     />
 
             </LinearLayout>
@@ -675,4 +675,4 @@
     </LinearLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
