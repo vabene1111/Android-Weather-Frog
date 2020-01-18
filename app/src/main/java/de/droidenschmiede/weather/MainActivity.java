@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public BillingManager billingManager;
     public PurchaseManager purchaseManager;
+    public AdManager adManager;
     public DialogManager dialogManager;
 
     @Override
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         dialogManager = new DialogManager(this);
 
         billingManager.initBilling();
+
+        adManager.init();
 
         btnWeather = findViewById(R.id.btn_main_openWeather);
         btnWeather.setOnClickListener(new View.OnClickListener() {
