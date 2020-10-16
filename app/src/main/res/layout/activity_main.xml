@@ -287,12 +287,14 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/card_banner_ad"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="6dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/colorCardBgInstr"
+                android:animateLayoutChanges="true"
                 >
 
                 <LinearLayout

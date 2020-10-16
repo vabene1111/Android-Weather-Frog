@@ -1,5 +1,9 @@
 package de.droidenschmiede.weather;
+import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+
+import androidx.cardview.widget.CardView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
@@ -14,6 +18,14 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class AdManager {
 
     public MainActivity m;
+
+    public boolean pauseAdReload = false;
+    public int REFRESH_RATE_IN_SECONDS = 5;
+    public CardView cardAd;
+    public AdView mAdView;
+    public final Handler refreshHandler = new Handler();
+    public final Runnable refreshRunnable = new RefreshRunnable();
+    public AdRequest adRequest;
 
     public AdManager(MainActivity m){
         this.m = m;
@@ -32,23 +44,37 @@ public class AdManager {
 
     }
 
+    public void pauseAds(){
+        pauseAdReload = true;
+    }
+
     public void loadBanner1(){
 
-        AdView mAdView = m.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
+        pauseAdReload = false;
+
+        cardAd = m.findViewById(R.id.card_banner_ad);
+
+        cardAd.setVisibility(View.GONE);
+
+        mAdView = m.findViewById(R.id.adView);
+        adRequest = new AdRequest.Builder()
                 .addTestDevice("9AF9280FE7C9BA01E232DE17BBF355DC")
                 .build();
-        mAdView.loadAd(adRequest);
 
         mAdView.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
                 // Code to be executed when an ad finishes loading.
+                cardAd.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
                 // Code to be executed when an ad request fails.
+                if(pauseAdReload == false){
+                    refreshHandler.removeCallbacks(refreshRunnable);
+                    refreshHandler.postDelayed(refreshRunnable, REFRESH_RATE_IN_SECONDS * 1000);
+                }
             }
 
             @Override
@@ -71,7 +97,22 @@ public class AdManager {
             public void onAdClosed() {
                 // Code to be executed when the user is about to return
                 // to the app after tapping on an ad.
+                cardAd.setVisibility(View.GONE);
+
+                if(pauseAdReload == false){
+                    refreshHandler.removeCallbacks(refreshRunnable);
+                    refreshHandler.postDelayed(refreshRunnable, REFRESH_RATE_IN_SECONDS * 1000);
+                }
             }
         });
+
+        mAdView.loadAd(adRequest);
+    }
+
+    private class RefreshRunnable implements Runnable {
+        @Override
+        public void run() {
+            mAdView.loadAd(adRequest);
+        }
     }
 }

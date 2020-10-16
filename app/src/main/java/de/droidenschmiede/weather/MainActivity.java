@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public BillingManager billingManager;
     public PurchaseManager purchaseManager;
     public AdManager adManager;
+    public StatsManager statsManager;
+    public SharedPrefManager prefManager;
     public DialogManager dialogManager;
 
     @Override
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         billingManager = new BillingManager(this);
         purchaseManager = new PurchaseManager(this);
         adManager = new AdManager(this);
+        statsManager = new StatsManager(this);
+        prefManager = new SharedPrefManager(this);
         dialogManager = new DialogManager(this);
 
         billingManager.initBilling();
@@ -65,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
             }
         });
+
+
+        //Stats
+        statsManager.fireStatOpened();
 
     }
 
@@ -112,5 +120,17 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, getResources().getText(R.string.activity_not_found), Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        adManager.pauseAds();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        adManager.loadBanner1();
     }
 }
