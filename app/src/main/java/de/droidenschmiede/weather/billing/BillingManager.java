@@ -1,7 +1,7 @@
 package de.droidenschmiede.weather.billing;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.android.billingclient.api.AcknowledgePurchaseParams;
@@ -86,6 +86,8 @@ public class BillingManager implements PurchasesUpdatedListener{
 
                    // mBillingUpdatesListener.onBillingClientSetupFinished();
 
+                    mIsServiceConnected = true;
+
                     queryPurchases();
 
                 }
@@ -97,6 +99,10 @@ public class BillingManager implements PurchasesUpdatedListener{
 
                 mIsServiceConnected = false;
                 billingClient.startConnection(this);
+
+                mIsServiceConnected = false;
+
+                Log.d("Billing", " disconnected");
             }
         });
 
@@ -125,11 +131,16 @@ public class BillingManager implements PurchasesUpdatedListener{
 
     public void querySkuDetailsAsync(@BillingClient.SkuType final String itemType, final List<String> skuList,
                                      final SkuDetailsResponseListener listener) {
+
+        Log.d("Billing", "querySkuDetailsAsync");
+
         // Creating a runnable from the request to use it inside our connection retry policy below
         Runnable queryRequest = new Runnable() {
             @Override
             public void run() {
                 // Query the purchase async
+
+                Log.d("Billing", "querySkuDetailsAsync run");
 
                 SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
                 params.setSkusList(skuList).setType(itemType);
@@ -365,6 +376,7 @@ public class BillingManager implements PurchasesUpdatedListener{
     }
 
     public void startServiceConnection(final Runnable executeOnSuccess) {
+
         billingClient.startConnection(new BillingClientStateListener() {
             @SuppressLint("WrongConstant")
             @Override
@@ -396,12 +408,25 @@ public class BillingManager implements PurchasesUpdatedListener{
     }
 
     private void executeServiceRequest(Runnable runnable) {
-        if (mIsServiceConnected) {
-            runnable.run();
-        } else {
-            // If billing service was disconnected, we try to reconnect 1 time.
-            // (feel free to introduce your retry policy here).
-            startServiceConnection(runnable);
+
+        Log.d("Billing", "executeServiceRequest");
+
+        if(runnable != null) {
+
+            if (mIsServiceConnected) {
+                runnable.run();
+            } else {
+
+                Log.d("Billing", "executeServiceRequest: mService is not connected!");
+                // If billing service was disconnected, we try to reconnect 1 time.
+                // (feel free to introduce your retry policy here).
+
+                //!!! ENTFERNT :
+                //startServiceConnection(runnable);
+            }
+        }
+        else{
+            Log.d("Billing", "executeServiceRequest: runnable is null!");
         }
     }
 

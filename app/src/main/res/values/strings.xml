@@ -37,7 +37,6 @@
     <string name="rechtlich_title">Legal</string>
     <string name="info_version">version</string>
     <string name="impressum_header">Imprint</string>
-
     <string name="impressum_text">
         Angaben gemäß § 5 TMG \n
 Timo Krusch \n
@@ -131,5 +130,7 @@ Diese Website benutzt Google Adsense, einen Webanzeigendienst der Google Inc., U
         Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und
         Weise und zu dem zuvor benannten Zweck einverstanden.
     </string>
+
+
 
 </resources>

@@ -3,7 +3,7 @@ package de.droidenschmiede.weather;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import de.droidenschmiede.weather.billing.BillingManager;
 import de.droidenschmiede.weather.billing.PurchaseManager;
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public BillingManager billingManager;
     public PurchaseManager purchaseManager;
+    public AdManager adManager;
     public DialogManager dialogManager;
 
     @Override
@@ -35,9 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
         billingManager = new BillingManager(this);
         purchaseManager = new PurchaseManager(this);
+        adManager = new AdManager(this);
         dialogManager = new DialogManager(this);
 
         billingManager.initBilling();
+
+        adManager.init();
 
         btnWeather = findViewById(R.id.btn_main_openWeather);
         btnWeather.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,7 @@
 package de.droidenschmiede.weather;
 
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import de.droidenschmiede.weather.dialogs.AboutDialogFragment;
 import de.droidenschmiede.weather.dialogs.AboutTyp;
@@ -33,8 +34,8 @@ public class DialogManager {
 
     private FragmentTransaction fragTransaction(String tag){
 
-        android.support.v4.app.FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();
-        android.support.v4.app.Fragment prev = m.getSupportFragmentManager().findFragmentByTag(tag);
+        FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();
+        Fragment prev = m.getSupportFragmentManager().findFragmentByTag(tag);
         if (prev != null) {
             ft.remove(prev);
         }
@@ -45,8 +46,8 @@ public class DialogManager {
 
     public void showAboutDialog(AboutTyp typ){
 
-        android.support.v4.app.FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();
-        android.support.v4.app.Fragment prev = m.getSupportFragmentManager().findFragmentByTag("dialogAbout");
+        FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();
+        Fragment prev = m.getSupportFragmentManager().findFragmentByTag("dialogAbout");
         if (prev != null) {
             ft.remove(prev);
         }
