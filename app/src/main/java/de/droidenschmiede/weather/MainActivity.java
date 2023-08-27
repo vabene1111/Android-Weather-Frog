@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import de.droidenschmiede.weather.billing.BillingManager;
-import de.droidenschmiede.weather.billing.PurchaseManager;
+//import de.droidenschmiede.weather.billing.BillingManager;
+//import de.droidenschmiede.weather.billing.PurchaseManager;
 import de.droidenschmiede.weather.dialogs.AboutTyp;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public Button btnDonate;
     public Button btnRate;
 
-    public BillingManager billingManager;
-    public PurchaseManager purchaseManager;
+//    public BillingManager billingManager;
+//    public PurchaseManager purchaseManager;
     public AdManager adManager;
     public StatsManager statsManager;
     public SharedPrefManager prefManager;
@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        billingManager = new BillingManager(this);
-        purchaseManager = new PurchaseManager(this);
+//        billingManager = new BillingManager(this);
+//        purchaseManager = new PurchaseManager(this);
         adManager = new AdManager(this);
         statsManager = new StatsManager(this);
         prefManager = new SharedPrefManager(this);
         dialogManager = new DialogManager(this);
 
-        billingManager.initBilling();
+//        billingManager.initBilling();
 
         adManager.init();
 
@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnDonate = findViewById(R.id.btn_main_donate);
-        btnDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialogManager.showDonateDialog();
-            }
-        });
+//        btnDonate = findViewById(R.id.btn_main_donate);
+//        btnDonate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialogManager.showDonateDialog();
+//            }
+//        });
 
         btnRate = findViewById(R.id.btn_main_rate);
         btnRate.setOnClickListener(new View.OnClickListener() {
@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/vabene1111/Android-Weather-Frog"));
                 startActivity(browserIntent);
                 return true;
-            case R.id.mi_main_donate:
-                dialogManager.showDonateDialog();
-                return true;
+//            case R.id.mi_main_donate:
+//                dialogManager.showDonateDialog();
+//                return true;
             case R.id.mi_main_legal:
                 dialogManager.showAboutDialog(AboutTyp.IMPRESSUM);
                 return true;

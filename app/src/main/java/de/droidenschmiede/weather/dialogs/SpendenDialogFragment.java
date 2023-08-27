@@ -91,16 +91,16 @@ public class SpendenDialogFragment extends DialogFragment {
             }
         });
 
-        layout = v.findViewById(R.id.layout_premium);
-        buttonBuy = v.findViewById(R.id.button_donate_buy);
-        buttonBuy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                m.billingManager.showPurchaseWindow();
-                dismiss();
-            }
-        });
+//        layout = v.findViewById(R.id.layout_premium);
+//        buttonBuy = v.findViewById(R.id.button_donate_buy);
+//        buttonBuy.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                m.billingManager.showPurchaseWindow();
+//                dismiss();
+//            }
+//        });
     }
 
     @Override
