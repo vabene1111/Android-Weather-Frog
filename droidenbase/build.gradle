@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "29.0.2"
 
 
     defaultConfig {
@@ -19,6 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'de.droidenschmiede.droidenbase'
 
 }
 

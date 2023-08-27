@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     defaultConfig {
         applicationId "de.droidenschmiede.weather"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 9
-        versionName "2.6"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 21
+        versionName "2.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -19,6 +19,7 @@ android {
     lintOptions {
         checkReleaseBuilds false
     }
+    namespace 'de.droidenschmiede.weather'
 }
 
 dependencies {
